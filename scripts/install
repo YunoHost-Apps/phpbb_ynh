@@ -91,6 +91,19 @@ chmod -R o-rwx "$final_path"
 chown -R $app:www-data "$final_path"
 
 #=================================================
+# DOWNLOAD, CHECK AND UNPACK LANGUAGE PACK
+#=================================================
+
+tmpdir="$(mktemp -d)"
+
+# Download, check integrity, uncompress and patch the source from app.src
+ynh_setup_source --dest_dir="$tmpdir" --source_id=fr
+cp -a "$tmpdir/language/fr" "$final_path/language/fr"
+cp -a "$tmpdir/styles/prosilver/theme/fr" "$final_path/styles/prosilver/theme/fr" 
+# Remove the tmp directory securely
+ynh_secure_remove --file="$tmpdir"
+
+#=================================================
 # NGINX CONFIGURATION
 #=================================================
 ynh_script_progression --message="Configuring NGINX web server..." --weight=2

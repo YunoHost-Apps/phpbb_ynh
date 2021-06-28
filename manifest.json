@@ -11,10 +11,10 @@
     "upstream": {
         "license": "free",
         "website": "http://www.phpbb.com/",
-        "demo": "https://demo.example.com",
-        "admindoc": "https://yunohost.org/packaging_apps",
+        "demo": "https://www.phpbb.com/demo/",
+        "admindoc": "https://www.phpbb.com/support/docs/",
         "userdoc": "https://yunohost.org/apps",
-        "code": "https://some.forge.com/example/example"
+        "code": "https://github.com/phpbb/phpbb"
     },
     "license": "free",
     "maintainer": {

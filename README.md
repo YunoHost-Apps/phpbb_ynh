@@ -17,7 +17,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 Forum software that is easy to use, powerful, and highly customisable
 
-**Shipped version:** 3.3.4~ynh1
+**Shipped version:** 3.3.4~ynh2
 
 **Demo:** https://www.phpbb.com/demo/
 

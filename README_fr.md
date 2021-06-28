@@ -13,7 +13,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 Forum facile à utiliser, puissant et hautement personnalisable
 
-**Version incluse :** 3.3.4~ynh1
+**Version incluse :** 3.3.4~ynh2
 
 **Démo :** https://www.phpbb.com/demo/
 

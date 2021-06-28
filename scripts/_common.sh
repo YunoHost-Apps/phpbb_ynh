@@ -20,7 +20,6 @@ extra_php_dependencies="php${YNH_PHP_VERSION}-mbstring php${YNH_PHP_VERSION}-fpm
 # FUTURE OFFICIAL HELPERS
 #=================================================
 
-
 # Send an email to inform the administrator
 #
 # usage: ynh_send_readme_to_admin app_message [recipients]

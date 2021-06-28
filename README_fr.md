@@ -21,6 +21,12 @@ Forum facile à utiliser, puissant et hautement personnalisable
 
 ![](./doc/screenshots/screenshot.png)
 
+## Avertissements / informations importantes
+
+## Configuration
+
+1. L'application devra terminer le processus d'enregistrement une fois l'installation terminée en **visitant le domaine** sur lequel *phpBB* est installé.
+1. Les informations d'identification de la base de données MySQL seront envoyées à la **messagerie admin**.
 ## Documentations et ressources
 
 * Site officiel de l'app : http://www.phpbb.com/

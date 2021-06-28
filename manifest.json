@@ -1,6 +1,6 @@
 {
     "name": "phpBB",
-    "id": "phpBB",
+    "id": "phpbb",
     "packaging_format": 1,
     "description": {
         "en": "Forum software that is easy to use, powerful, and highly customisable",

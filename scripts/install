@@ -63,7 +63,7 @@ ynh_app_setting_set --app=$app --key=port --value=$port
 #=================================================
 # CREATE DEDICATED USER
 #=================================================
-ynh_script_progression --message="Configuring system user..." --time --weight=1
+ynh_script_progression --message="Configuring system user..." --weight=1
 
 # Create a system user
 ynh_system_user_create --username=$app --home_dir="$final_path"
@@ -71,7 +71,7 @@ ynh_system_user_create --username=$app --home_dir="$final_path"
 #=================================================
 # CREATE A MYSQL DATABASE
 #=================================================
-ynh_script_progression --message="Creating a MySQL database..." --time --weight=1
+ynh_script_progression --message="Creating a MySQL database..." --weight=3
 
 db_name=$(ynh_sanitize_dbid --db_name=$app)
 db_user=$db_name
@@ -81,7 +81,7 @@ ynh_mysql_setup_db --db_user=$db_user --db_name=$db_name
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression --message="Setting up source files..." --time --weight=1
+ynh_script_progression --message="Setting up source files..." --weight=5
 
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
@@ -94,7 +94,7 @@ chown -R $app:www-data "$final_path"
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring NGINX web server..." --time --weight=1
+ynh_script_progression --message="Configuring NGINX web server..." --weight=2
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config
@@ -102,7 +102,7 @@ ynh_add_nginx_config
 #=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring PHP-FPM..." --time --weight=1
+ynh_script_progression --message="Configuring PHP-FPM..." --weight=4
 
 # Create a dedicated PHP-FPM config
 ynh_add_fpm_config
@@ -112,12 +112,12 @@ ynh_add_fpm_config
 #=================================================
 
 # Set the app as temporarily public for curl call
-ynh_script_progression --message="Configuring SSOwat..." --time --weight=1
+ynh_script_progression --message="Configuring SSOwat..." --weight=1
 # Making the app public for curl
 ynh_permission_update --permission="main" --add="visitors"
 
 # Installation with curl
-ynh_script_progression --message="Finalizing installation..." --time --weight=1
+ynh_script_progression --message="Finalizing installation..." --weight=1
 ynh_local_curl "/install/app.php" "key1=value1" "key2=value2" "key3=value3"
 
 # Remove the public access
@@ -126,14 +126,14 @@ ynh_permission_update --permission="main" --remove="visitors"
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
 #=================================================
-ynh_script_progression --message="Integrating service in YunoHost..." --time --weight=1
+ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
 
 yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
 
 #=================================================
 # SETUP SSOWAT
 #=================================================
-ynh_script_progression --message="Configuring permissions..." --time --weight=1
+ynh_script_progression --message="Configuring permissions..." --weight=1
 
 # Make app public if necessary
 if [ $is_public -eq 1 ]
@@ -147,7 +147,7 @@ ynh_permission_create --permission="admin" --url="/admin" --allowed=$admin
 #=================================================
 # RELOAD NGINX
 #=================================================
-ynh_script_progression --message="Reloading NGINX web server..." --time --weight=1
+ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 ynh_systemd_action --service_name=nginx --action=reload
 
@@ -155,4 +155,4 @@ ynh_systemd_action --service_name=nginx --action=reload
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Installation of $app completed" --time --last
+ynh_script_progression --message="Installation of $app completed" --last

@@ -5,7 +5,7 @@ installer:
         email: __EMAIL__
 
     board:
-        lang: en
+        lang: __LANGUAGE__
         name: My Board
         description: My amazing new phpBB board
 

@@ -10,7 +10,7 @@
     "url": "http://www.phpbb.com/",
     "upstream": {
         "license": "free",
-        "website": "https://example.com",
+        "website": "http://www.phpbb.com/",
         "demo": "https://demo.example.com",
         "admindoc": "https://yunohost.org/packaging_apps",
         "userdoc": "https://yunohost.org/apps",

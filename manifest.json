@@ -18,8 +18,8 @@
     },
     "license": "GPL-2.0-only",
     "maintainer": {
-        "name": "polytan02",
-        "email": "polytan02@mcgva.org"
+        "name": "",
+        "email": ""
     },
     "requirements": {
         "yunohost": ">= 4.2.4"

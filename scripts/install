@@ -120,8 +120,14 @@ ynh_exec_as "$app" php${phpversion} "$final_path/install/phpbbcli.php" -q --no-i
 
 mv "$final_path/install" "$final_path/install_old"
 
-# Remove the public access
-ynh_permission_update --permission="main" --remove="visitors"
+#=================================================
+# ADD A CRON JOB
+#=================================================
+
+cron_path="/etc/cron.d/$app"
+ynh_add_config --template="../conf/phpbb.cron" --destination="$cron_path"
+chown root: "$cron_path"
+chmod 644 "$cron_path"
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST

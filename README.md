@@ -15,7 +15,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-#1 free, opensource bulletin board software
+Forum software that is easy to use, powerful, and highly customisable
 
 **Shipped version:** 3.3.4~ynh1
 

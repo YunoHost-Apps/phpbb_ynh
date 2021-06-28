@@ -11,7 +11,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-Le 1er logiciel de forum libre et gratuit
+Forum facile à utiliser, puissant et hautement personnalisable
 
 **Version incluse :** 3.3.4~ynh1
 

@@ -25,6 +25,7 @@ admin=$YNH_APP_ARG_ADMIN
 is_public=$YNH_APP_ARG_IS_PUBLIC
 language=$YNH_APP_ARG_LANGUAGE
 password=$YNH_APP_ARG_PASSWORD
+email=$(ynh_user_get_info --username=$admin --key=mail)
 
 app=$YNH_APP_INSTANCE_NAME
 
@@ -118,7 +119,7 @@ ynh_permission_update --permission="main" --add="visitors"
 
 # Installation with curl
 ynh_script_progression --message="Finalizing installation..." --weight=1
-ynh_local_curl "/install/app.php" "key1=value1" "key2=value2" "key3=value3"
+ynh_local_curl "/install/app.php" "admin_name=$admin" "board_email=$email" "admin_pass1=$password" "admin_pass2=$password"
 
 # Remove the public access
 ynh_permission_update --permission="main" --remove="visitors"
@@ -150,6 +151,26 @@ ynh_permission_create --permission="admin" --url="/admin" --allowed=$admin
 ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 ynh_systemd_action --service_name=nginx --action=reload
+
+#=================================================
+# SEND A README FOR THE ADMIN
+#=================================================
+ynh_script_progression --message="Sending a readme for the admin..."
+
+message="phpBB was successfully installed :)
+
+Please open your $app domain: https://$domain$path_url
+
+Complete the registration process from the setup page displayed.
+Details for MySQL database to be enterted while registration process:
+
+Database login:    $app
+Database name:     $app
+Database password: $db_pwd
+
+If you are facing any problem or want to improve this app, please open a new issue here: https://github.com/YunoHost-Apps/phpbb_ynh/issues"
+
+ynh_send_readme_to_admin "$message"
 
 #=================================================
 # END OF SCRIPT

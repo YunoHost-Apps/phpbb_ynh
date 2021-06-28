@@ -19,7 +19,7 @@ Le 1er logiciel de forum libre et gratuit
 
 ## Documentations et ressources
 
-* Site officiel de l'app : https://example.com
+* Site officiel de l'app : http://www.phpbb.com/
 * Documentation officielle utilisateur : https://yunohost.org/apps
 * Documentation officielle de l'admin : https://yunohost.org/packaging_apps
 * Dépôt de code officiel de l'app : https://some.forge.com/example/example

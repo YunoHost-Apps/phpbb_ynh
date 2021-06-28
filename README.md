@@ -23,7 +23,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Documentation and resources
 
-* Official app website: https://example.com
+* Official app website: http://www.phpbb.com/
 * Official user documentation: https://yunohost.org/apps
 * Official admin documentation: https://yunohost.org/packaging_apps
 * Upstream app code repository: https://some.forge.com/example/example

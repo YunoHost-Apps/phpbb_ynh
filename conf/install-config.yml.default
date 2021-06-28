@@ -30,7 +30,7 @@ installer:
     server:
         cookie_secure: true
         server_protocol: https://
-        force_server_vars: false
+        force_server_vars: true
         server_name: __DOMAIN__
         server_port: 443
         script_path: __PATH_URL__

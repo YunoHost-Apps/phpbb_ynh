@@ -168,7 +168,7 @@ ynh_permission_update --permission="main" --add="visitors"
 
 # Installation with curl
 ynh_script_progression --message="Finalizing installation..." --time --weight=1
-ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
+ynh_local_curl "/install/app.php" "key1=value1" "key2=value2" "key3=value3"
 
 # Remove the public access
 ynh_permission_update --permission="main" --remove="visitors"
@@ -214,13 +214,8 @@ ynh_script_progression --message="Configuring permissions..." --time --weight=1
 # Make app public if necessary
 if [ $is_public -eq 1 ]
 then
-	# Everyone can access the app.
-	# The "main" permission is automatically created before the install script.
 	ynh_permission_update --permission="main" --add="visitors"
 fi
-
-### N.B. : the following extra permissions only make sense if your app
-### does have for example an admin interface or an api.
 
 # Only the admin can access the admin panel of the app (if the app has an admin panel)
 ynh_permission_create --permission="admin" --url="/admin" --allowed=$admin

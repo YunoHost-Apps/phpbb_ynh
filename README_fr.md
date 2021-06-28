@@ -15,14 +15,18 @@ Le 1er logiciel de forum libre et gratuit
 
 **Version incluse :** 3.3.4~ynh1
 
-**Démo :** https://demo.example.com
+**Démo :** https://www.phpbb.com/demo/
+
+## Captures d'écran
+
+![](./doc/screenshots/screenshot.png)
 
 ## Documentations et ressources
 
 * Site officiel de l'app : http://www.phpbb.com/
 * Documentation officielle utilisateur : https://yunohost.org/apps
-* Documentation officielle de l'admin : https://yunohost.org/packaging_apps
-* Dépôt de code officiel de l'app : https://some.forge.com/example/example
+* Documentation officielle de l'admin : https://www.phpbb.com/support/docs/
+* Dépôt de code officiel de l'app : https://github.com/phpbb/phpbb
 * Documentation YunoHost pour cette app : https://yunohost.org/app_phpBB
 * Signaler un bug : https://github.com/YunoHost-Apps/phpBB_ynh/issues
 

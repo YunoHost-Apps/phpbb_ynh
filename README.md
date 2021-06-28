@@ -19,14 +19,18 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 **Shipped version:** 3.3.4~ynh1
 
-**Demo:** https://demo.example.com
+**Demo:** https://www.phpbb.com/demo/
+
+## Screenshots
+
+![](./doc/screenshots/screenshot.png)
 
 ## Documentation and resources
 
 * Official app website: http://www.phpbb.com/
 * Official user documentation: https://yunohost.org/apps
-* Official admin documentation: https://yunohost.org/packaging_apps
-* Upstream app code repository: https://some.forge.com/example/example
+* Official admin documentation: https://www.phpbb.com/support/docs/
+* Upstream app code repository: https://github.com/phpbb/phpbb
 * YunoHost documentation for this app: https://yunohost.org/app_phpBB
 * Report a bug: https://github.com/YunoHost-Apps/phpBB_ynh/issues
 

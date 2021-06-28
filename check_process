@@ -1,14 +1,12 @@
 ;; Test complet
-	auto_remove=1
 	; Manifest
-		domain="domain.tld"	(DOMAIN)
-		path="/path"	(PATH)
-		is_public="Yes"	(PUBLIC|public=Yes|private=No)
-		admin_login="admin"
-		admin_pwd="super_strong_admin_password"	(PASSWORD)
-		admin_email="admin@DOMAIN.TLD"
-		lang="en"
-		curl_inst="No"
+		domain="domain.tld"
+		path="/path"
+		admin="john"
+		language="fr"
+		is_public=1
+		password="pass"
+		port="666"
 	; Checks
 		pkg_linter=1
 		setup_sub_dir=1
@@ -17,12 +15,15 @@
 		setup_private=1
 		setup_public=1
 		upgrade=1
+		upgrade=1	from_commit=CommitHash
 		backup_restore=1
-		multi_instance=0
-		wrong_user=0
-		wrong_path=1
-		incorrect_path=1
-		corrupt_source=0
-		fail_download_source=0
+		multi_instance=1
 		port_already_use=0
-		final_path_already_use=0
+		change_url=1
+;;; Options
+Email=
+Notification=none
+;;; Upgrade options
+	; commit=CommitHash
+		name=Name and date of the commit.
+		manifest_arg=domain=DOMAIN&path=PATH&admin=USER&language=fr&is_public=1&password=pass&port=666&

@@ -1,60 +1,66 @@
 {
     "name": "phpBB",
     "id": "phpBB",
+    "packaging_format": 1,
     "description": {
         "en": "#1 free, opensource bulletin board software",
         "fr": "Le 1er logiciel de forum libre et gratuit"
     },
+    "version": "3.3.4~ynh1",
     "url": "http://www.phpbb.com/",
+    "upstream": {
+        "license": "free",
+        "website": "https://example.com",
+        "demo": "https://demo.example.com",
+        "admindoc": "https://yunohost.org/packaging_apps",
+        "userdoc": "https://yunohost.org/apps",
+        "code": "https://some.forge.com/example/example"
+    },
+    "license": "free",
     "maintainer": {
         "name": "polytan02",
         "email": "polytan02@mcgva.org"
     },
-    "multi_instance": "false",
+    "requirements": {
+        "yunohost": ">= 4.2.4"
+    },
+    "multi_instance": false,
+    "services": [
+        "nginx",
+        "php7.3-fpm",
+        "mysql"
+    ],
     "arguments": {
         "install" : [
             {
                 "name": "domain",
-                "ask": {
-                    "en": "Choose a domain for phpBB",
-                    "fr": "Choisissez un domaine pour phpBB"
-                },
-                "example": "domain.org"
+                "type": "domain",
+                "example": "example.com"
             },
             {
                 "name": "path",
-                "ask": {
-                    "en": "Choose a path for phpBB",
-                    "fr": "Choisissez un chemin pour phpBB"
-                },
-                "example": "/forum",
-                "default": "/forum"
-            },
-	    {
-               "name": "is_public",
-                "ask": {
-                    "en": "Is it a public application ?",
-                    "fr": "Est-ce une page publique ?"
-                },
-                "choices": ["Yes", "No"],
-                "default": "Yes"
-	    },
-            {
-                "name": "admin_login",
-                "ask": {
-                    "en": "Indicate phpBB admin login",
-                    "fr": "Renseignez un login pour l'admin phpBB"
-                },
-                "example": "admin",
-                "default": "admin"
+                "type": "path",
+                "example": "/example",
+                "default": "/example"
             },
             {
-                "name": "admin_pwd",
-                "ask": {
-                    "en": "Indicate phpBB admin password. At this stage, this password is also used for phpBB MySQL database",
-                    "fr": "Renseignez un mot de passe pour l'admin phpBB. Pour l'instant, ce mot de passe est également utilisé pour la base de donnée MySQL de phpBB"
+                "name": "is_public",
+                "type": "boolean",
+                "default": true
+            },
+            {
+                "name": "admin",
+                "type": "user",
+                "example": "johndoe"
+            },
+            {
+                "name": "password",
+                "type": "password",
+                "help": {
+                    "en": "Use the help field to add an information for the admin about this question.",
+                    "fr": "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
                 },
-                "example": "super_strong_admin_password"
+                "example": "Choose a password"
             },
             {
                 "name": "admin_email",
@@ -64,15 +70,16 @@
                 },
                 "example": "admin@DOMAIN.TLD"
             },
-	    {
-               "name": "lang",
+            {
+                "name": "language",
+                "type": "string",
                 "ask": {
-                    "en": "Configure phpBB's language",
-                    "fr": "Configurer la langue de phpBB"
+                    "en": "Choose the application language",
+                    "fr": "Choisissez la langue de l'application"
                 },
-                "choices": ["en", "fr"],
-                "default": "en"
-	    },
+                "choices": ["fr", "en"],
+                "default": "fr"
+            },
 	    {
                "name": "curl_inst",
                 "ask": {

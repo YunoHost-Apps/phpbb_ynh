@@ -32,7 +32,7 @@ installer:
         server_protocol: https://
         force_server_vars: false
         server_name: __DOMAIN__
-        server_port: 80
+        server_port: 443
         script_path: __PATH_URL__
 
     extensions: ['phpbb/viglink']

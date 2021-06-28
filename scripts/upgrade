@@ -21,6 +21,7 @@ path_url=$(ynh_app_setting_get --app=$app --key=path)
 admin=$(ynh_app_setting_get --app=$app --key=admin)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 db_name=$(ynh_app_setting_get --app=$app --key=db_name)
+phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 
 #=================================================
 # CHECK VERSION
@@ -36,6 +37,12 @@ ynh_script_progression --message="Backing up the app before upgrading (may take 
 # Backup the current version of the app
 ynh_backup_before_upgrade
 ynh_clean_setup () {
+	if [ -n "$new_phpbb_dir" ]; then
+		ynh_secure_remove --file="$new_phpbb_dir"
+	fi
+	if [ -n "$old_phpbb_dir" ]; then
+		ynh_secure_remove --file="$old_phpbb_dir"
+	fi
 	# Restore it if the upgrade fails
 	ynh_restore_upgradebackup
 }
@@ -75,8 +82,26 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=5
 
+	new_phpbb_dir=$(mktemp -d)
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$final_path"
+	ynh_setup_source --dest_dir="$new_phpbb_dir"
+	ynh_secure_remove --file="$new_phpbb_dir/config.php"
+	ynh_secure_remove --file="$new_phpbb_dir/images"
+	ynh_secure_remove --file="$new_phpbb_dir/files"
+	ynh_secure_remove --file="$new_phpbb_dir/store"
+
+	old_phpbb_dir=$(mktemp -d)
+
+	mv $final_path/* $old_phpbb_dir
+	mv $old_phpbb_dir/config.php $final_path/
+	mv $old_phpbb_dir/images/ $final_path/
+	mv $old_phpbb_dir/files/ $final_path/
+	mv $old_phpbb_dir/store/ $final_path/
+
+	mv $new_phpbb_dir/* $final_path
+
+	ynh_secure_remove --file="$old_phpbb_dir"
+	ynh_secure_remove --file="$new_phpbb_dir"
 fi
 
 chmod 750 "$final_path"
@@ -98,6 +123,17 @@ ynh_script_progression --message="Upgrading PHP-FPM configuration..." --weight=2
 
 # Create a dedicated PHP-FPM config
 ynh_add_fpm_config
+
+#=================================================
+# PHP-FPM CONFIGURATION
+#=================================================
+ynh_script_progression --message="Upgrading the APP..." --weight=1
+
+ynh_exec_as "$app" php${phpversion} "$final_path/bin/phpbbcli.php" -q --no-interaction db:migrate
+
+if [ -e "$final_path/install" ]; then
+	mv "$final_path/install" "$final_path/install_old"
+fi
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST

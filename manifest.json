@@ -3,20 +3,20 @@
     "id": "phpBB",
     "packaging_format": 1,
     "description": {
-        "en": "#1 free, opensource bulletin board software",
-        "fr": "Le 1er logiciel de forum libre et gratuit"
+        "en": "Forum software that is easy to use, powerful, and highly customisable",
+        "fr": "Forum facile à utiliser, puissant et hautement personnalisable"
     },
     "version": "3.3.4~ynh1",
     "url": "http://www.phpbb.com/",
     "upstream": {
-        "license": "free",
+        "license": "GPL-2.0-only",
         "website": "http://www.phpbb.com/",
         "demo": "https://www.phpbb.com/demo/",
         "admindoc": "https://www.phpbb.com/support/docs/",
         "userdoc": "https://yunohost.org/apps",
         "code": "https://github.com/phpbb/phpbb"
     },
-    "license": "free",
+    "license": "GPL-2.0-only",
     "maintainer": {
         "name": "polytan02",
         "email": "polytan02@mcgva.org"
@@ -63,14 +63,6 @@
                 "example": "Choose a password"
             },
             {
-                "name": "admin_email",
-                "ask": {
-                    "en": "Indicate phpBB admin email - Please make sure it exists on this server !",
-                    "fr": "Renseignez un e-mail pour l'admin phpBB"
-                },
-                "example": "admin@DOMAIN.TLD"
-            },
-            {
                 "name": "language",
                 "type": "string",
                 "ask": {
@@ -79,16 +71,7 @@
                 },
                 "choices": ["fr", "en"],
                 "default": "fr"
-            },
-	    {
-               "name": "curl_inst",
-                "ask": {
-                    "en": "Automatically configure phpBB via cURL ? [BROKEN - DO NOT USE]",
-                    "fr": "Configurer phpBB automatiquement via cURL ? [CASSE - NE PAS UTILISER]"
-                },
-                "choices": ["Yes", "No"],
-                "default": "No"
-	    }
+            }
         ]
     }
 }

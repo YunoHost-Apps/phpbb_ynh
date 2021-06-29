@@ -25,6 +25,7 @@ admin=$YNH_APP_ARG_ADMIN
 is_public=$YNH_APP_ARG_IS_PUBLIC
 password=$YNH_APP_ARG_PASSWORD
 email=$(ynh_user_get_info --username=$admin --key=mail)
+language=$YNH_APP_ARG_LANGUAGE
 
 app=$YNH_APP_INSTANCE_NAME
 
@@ -47,6 +48,7 @@ ynh_script_progression --message="Storing installation settings..." --weight=1
 ynh_app_setting_set --app=$app --key=domain --value=$domain
 ynh_app_setting_set --app=$app --key=path --value=$path_url
 ynh_app_setting_set --app=$app --key=admin --value=$admin
+ynh_app_setting_set --app=$app --key=language --value=$language
 
 #=================================================
 # STANDARD MODIFICATIONS
@@ -95,6 +97,7 @@ chown -R $app:www-data "$final_path"
 #=================================================
 
 tmpdir="$(mktemp -d)"
+
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$tmpdir" --source_id=fr
 cp -a "$tmpdir/language/fr" "$final_path/language/fr"
@@ -168,17 +171,6 @@ ynh_permission_create --permission="admin" --url="/adm" --allowed=$admin
 ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 ynh_systemd_action --service_name=nginx --action=reload
-
-#=================================================
-# SEND A README FOR THE ADMIN
-#=================================================
-ynh_script_progression --message="Sending a readme for the admin..."
-
-message="phpBB was successfully installed :)
-
-If you are facing any problem or want to improve this app, please open a new issue here: https://github.com/YunoHost-Apps/phpbb_ynh/issues"
-
-ynh_send_readme_to_admin "$message"
 
 #=================================================
 # END OF SCRIPT

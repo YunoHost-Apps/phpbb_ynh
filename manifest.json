@@ -34,8 +34,7 @@
         "install" : [
             {
                 "name": "domain",
-                "type": "domain",
-                "example": "example.com"
+                "type": "domain"
             },
             {
                 "name": "path",
@@ -60,13 +59,11 @@
             },
             {
                 "name": "admin",
-                "type": "user",
-                "example": "johndoe"
+                "type": "user"
             },
             {
                 "name": "password",
-                "type": "password",
-                "example": "Choose a password"
+                "type": "password"
             }
         ]
     }

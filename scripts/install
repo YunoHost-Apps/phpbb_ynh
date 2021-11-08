@@ -140,8 +140,8 @@ mv "$final_path/install" "$final_path/install_old"
 ynh_script_progression --message="Setuping a cron..." --weight=1
 
 ynh_add_config --template="../conf/phpbb.cron" --destination="/etc/cron.d/$app"
-chown root: "$cron_path"
-chmod 644 "$cron_path"
+chown root: "/etc/cron.d/$app"
+chmod 644 "/etc/cron.d/$app"
 
 #=================================================
 # SETUP SSOWAT

@@ -13,7 +13,6 @@
         "website": "http://www.phpbb.com/",
         "demo": "https://www.phpbb.com/demo/",
         "admindoc": "https://www.phpbb.com/support/docs/",
-        "userdoc": "https://yunohost.org/apps",
         "code": "https://github.com/phpbb/phpbb"
     },
     "license": "GPL-2.0-only",

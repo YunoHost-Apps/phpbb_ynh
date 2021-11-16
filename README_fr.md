@@ -32,7 +32,6 @@ phpBB is a free flat-forum bulletin board software solution that can be used to 
 ## Documentations et ressources
 
 * Site officiel de l'app : http://www.phpbb.com/
-* Documentation officielle utilisateur : https://yunohost.org/apps
 * Documentation officielle de l'admin : https://www.phpbb.com/support/docs/
 * Dépôt de code officiel de l'app : https://github.com/phpbb/phpbb
 * Documentation YunoHost pour cette app : https://yunohost.org/app_phpbb

@@ -104,6 +104,15 @@ SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=true
 SOURCE_EXTRACT=true
 EOT
+
+cat <<EOT > conf/fr.src
+SOURCE_URL=$asset_url
+SOURCE_SUM=$checksum
+SOURCE_FORMAT=zip
+SOURCE_IN_SUBDIR=true
+SOURCE_FILENAME=phpbb-language.zip
+SOURCE_EXTRACT=true
+EOT
 echo "... conf/$src.src updated"
 
 else

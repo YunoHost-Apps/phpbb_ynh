@@ -14,7 +14,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website. With an extensive database of user-created extensions and styles database containing hundreds of style and image packages to customise your board, you can create a very unique forum in minutes.
 
 
-**Version incluse :** 3.3.4~ynh3
+**Version incluse :** 3.3.5~ynh1
 
 **Démo :** https://www.phpbb.com/demo/
 
@@ -32,7 +32,6 @@ phpBB is a free flat-forum bulletin board software solution that can be used to 
 ## Documentations et ressources
 
 * Site officiel de l'app : http://www.phpbb.com/
-* Documentation officielle utilisateur : https://yunohost.org/apps
 * Documentation officielle de l'admin : https://www.phpbb.com/support/docs/
 * Dépôt de code officiel de l'app : https://github.com/phpbb/phpbb
 * Documentation YunoHost pour cette app : https://yunohost.org/app_phpbb

@@ -38,12 +38,6 @@ ynh_script_progression --message="Backing up the app before upgrading (may take 
 # Backup the current version of the app
 ynh_backup_before_upgrade
 ynh_clean_setup () {
-	if [ -n "$new_phpbb_dir" ]; then
-		ynh_secure_remove --file="$new_phpbb_dir"
-	fi
-	if [ -n "$old_phpbb_dir" ]; then
-		ynh_secure_remove --file="$old_phpbb_dir"
-	fi
 	# Restore it if the upgrade fails
 	ynh_restore_upgradebackup
 }
@@ -118,6 +112,13 @@ ynh_script_progression --message="Upgrading NGINX web server configuration..." -
 ynh_add_nginx_config
 
 #=================================================
+# UPGRADE DEPENDENCIES
+#=================================================
+ynh_script_progression --message="Upgrading dependencies..." --weight=1
+
+ynh_install_app_dependencies $pkg_dependencies
+
+#=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
 ynh_script_progression --message="Upgrading PHP-FPM configuration..." --weight=2
@@ -130,20 +131,20 @@ ynh_add_fpm_config
 #=================================================
 ynh_script_progression --message="Upgrading the APP..." --weight=1
 
-ynh_exec_as "$app" php${phpversion} "$final_path/bin/phpbbcli.php" -q --no-interaction db:migrate
+ynh_exec_as "$app" php${phpversion} "$final_path/bin/phpbbcli.php" --no-interaction db:migrate --safe-mode
 
 if [ -e "$final_path/install" ]; then
 	mv "$final_path/install" "$final_path/install_old"
 fi
 
 #=================================================
-# ADD A CRON JOB
+# SETUP A CRON
 #=================================================
+ynh_script_progression --message="Setuping a cron..." --weight=1
 
-cron_path="/etc/cron.d/$app"
-ynh_add_config --template="../conf/phpbb.cron" --destination="$cron_path"
-chown root: "$cron_path"
-chmod 644 "$cron_path"
+ynh_add_config --template="../conf/phpbb.cron" --destination="/etc/cron.d/$app"
+chown root: "/etc/cron.d/$app"
+chmod 644 "/etc/cron.d/$app"
 
 #=================================================
 # RELOAD NGINX

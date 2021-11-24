@@ -99,9 +99,6 @@ then
 	ynh_secure_remove --file="$new_phpbb_dir"
 fi
 
-chmod 750 "$final_path"
-chmod -R o-rwx "$final_path"
-chown -R $app:www-data "$final_path"
 
 #=================================================
 # NGINX CONFIGURATION
@@ -137,6 +134,10 @@ php${phpversion} "$final_path/bin/phpbbcli.php" --no-interaction db:migrate --sa
 if [ -e "$final_path/install" ]; then
 	mv "$final_path/install" "$final_path/install_old"
 fi
+
+chmod 750 "$final_path"
+chmod -R o-rwx "$final_path"
+chown -R $app:www-data "$final_path"
 
 #=================================================
 # SETUP A CRON

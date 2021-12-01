@@ -126,10 +126,9 @@ ynh_add_fpm_config
 #=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Upgrading the APP..." --weight=1
+ynh_script_progression --message="Upgrading the $app..." --weight=1
 
-#ynh_exec_as "$app" 
-php${phpversion} "$final_path/bin/phpbbcli.php" --no-interaction db:migrate --safe-mode
+ynh_exec_as "$app" php${phpversion} "$final_path/bin/phpbbcli.php" --no-interaction db:migrate --safe-mode
 
 if [ -e "$final_path/install" ]; then
 	mv "$final_path/install" "$final_path/install_old"

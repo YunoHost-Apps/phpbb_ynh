@@ -61,13 +61,13 @@ fi
 
 # If fpm_footprint doesn't exist, create it
 if [ -z "$fpm_footprint" ]; then
-	fpm_footprint=medium
+	fpm_footprint=low
 	ynh_app_setting_set --app=$app --key=fpm_footprint --value=$fpm_footprint
 fi
 
 # If fpm_usage doesn't exist, create it
 if [ -z "$fpm_usage" ]; then
-	fpm_usage=medium
+	fpm_usage=low
 	ynh_app_setting_set --app=$app --key=fpm_usage --value=$fpm_usage
 fi
 
@@ -113,7 +113,6 @@ then
 	ynh_secure_remove --file="$old_phpbb_dir"
 	ynh_secure_remove --file="$new_phpbb_dir"
 fi
-
 
 #=================================================
 # NGINX CONFIGURATION

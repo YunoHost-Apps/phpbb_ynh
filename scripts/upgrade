@@ -77,26 +77,28 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=5
 
-	new_phpbb_dir=$(mktemp -d)
-	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$new_phpbb_dir"
-	ynh_secure_remove --file="$new_phpbb_dir/config.php"
-	ynh_secure_remove --file="$new_phpbb_dir/images"
-	ynh_secure_remove --file="$new_phpbb_dir/files"
-	ynh_secure_remove --file="$new_phpbb_dir/store"
+	# new_phpbb_dir=$(mktemp -d)
+	# # Download, check integrity, uncompress and patch the source from app.src
+	# ynh_setup_source --dest_dir="$new_phpbb_dir"
+	# ynh_secure_remove --file="$new_phpbb_dir/config.php"
+	# ynh_secure_remove --file="$new_phpbb_dir/images"
+	# ynh_secure_remove --file="$new_phpbb_dir/files"
+	# ynh_secure_remove --file="$new_phpbb_dir/store"
 
-	old_phpbb_dir=$(mktemp -d)
+	# old_phpbb_dir=$(mktemp -d)
 
-	mv $final_path/* $old_phpbb_dir
-	mv $old_phpbb_dir/config.php $final_path/
-	mv $old_phpbb_dir/images/ $final_path/
-	mv $old_phpbb_dir/files/ $final_path/
-	mv $old_phpbb_dir/store/ $final_path/
+	# mv $final_path/* $old_phpbb_dir
+	# mv $old_phpbb_dir/config.php $final_path/
+	# mv $old_phpbb_dir/images/ $final_path/
+	# mv $old_phpbb_dir/files/ $final_path/
+	# mv $old_phpbb_dir/store/ $final_path/
 
-	mv $new_phpbb_dir/* $final_path
+	# mv $new_phpbb_dir/* $final_path
 
-	ynh_secure_remove --file="$old_phpbb_dir"
-	ynh_secure_remove --file="$new_phpbb_dir"
+	# ynh_secure_remove --file="$old_phpbb_dir"
+	# ynh_secure_remove --file="$new_phpbb_dir"
+
+	ynh_setup_source --dest_dir="$final_path" --keep="$final_path/config.php $final_path/images $final_path/files $final_path/store"
 fi
 
 

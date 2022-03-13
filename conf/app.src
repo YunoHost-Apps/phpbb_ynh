@@ -1,5 +1,5 @@
-SOURCE_URL=https://download.phpbb.com/pub/release/3.3/3.3.4/phpBB-3.3.4.zip
-SOURCE_SUM=7fea067567f8190ed5c84645bf535da0dca547f6c116c543bac33940824773a8
+SOURCE_URL=https://download.phpbb.com/pub/release/3.3/3.3.5/phpBB-3.3.5.zip
+SOURCE_SUM=983d60881fab3139bbcbe9182dcaaa1d2e9c6fb80fef682a0b28785ee22d05dd
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=true

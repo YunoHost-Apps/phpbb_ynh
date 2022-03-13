@@ -15,9 +15,10 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-Forum software that is easy to use, powerful, and highly customisable
+phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website. With an extensive database of user-created extensions and styles database containing hundreds of style and image packages to customise your board, you can create a very unique forum in minutes.
 
-**Shipped version:** 3.3.4~ynh3
+
+**Shipped version:** 3.3.5~ynh1
 
 **Demo:** https://www.phpbb.com/demo/
 
@@ -36,7 +37,6 @@ Forum software that is easy to use, powerful, and highly customisable
 ## Documentation and resources
 
 * Official app website: http://www.phpbb.com/
-* Official user documentation: https://yunohost.org/apps
 * Official admin documentation: https://www.phpbb.com/support/docs/
 * Upstream app code repository: https://github.com/phpbb/phpbb
 * YunoHost documentation for this app: https://yunohost.org/app_phpbb

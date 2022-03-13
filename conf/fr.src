@@ -1,7 +1,7 @@
-SOURCE_URL=https://github.com/qiaeru/phpbb-language-fr/archive/refs/tags/v4.4.0.zip
-SOURCE_SUM=c3a655a36ca7ce97ccae927850c2b4f1e1d2734558f2e08ca94bbf05e50aaafb
+SOURCE_URL=https://github.com/qiaeru/phpbb-language-fr/archive/refs/tags/v4.5.0.zip
+SOURCE_SUM=a959ab84d60c99cabb9353adcc2e24d9f597669c8832e6fa31afebc3cafb1b5e
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=phpbb-language-fr-4.4.0.zip
+SOURCE_FILENAME=phpbb-language.zip
 SOURCE_EXTRACT=true

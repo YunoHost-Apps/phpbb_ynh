@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # phpBB for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/phpbb.svg)](https://dash.yunohost.org/appci/app/phpbb) ![](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/phpbb.svg)](https://dash.yunohost.org/appci/app/phpbb) ![Working status](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)  
 [![Install phpBB with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpbb)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -24,7 +24,7 @@ phpBB is a free flat-forum bulletin board software solution that can be used to 
 
 ## Screenshots
 
-![](./doc/screenshots/screenshot.png)
+![Screenshot of phpBB](./doc/screenshots/screenshot.png)
 
 ## Disclaimers / important information
 
@@ -36,21 +36,22 @@ phpBB is a free flat-forum bulletin board software solution that can be used to 
 
 ## Documentation and resources
 
-* Official app website: http://www.phpbb.com/
-* Official admin documentation: https://www.phpbb.com/support/docs/
-* Upstream app code repository: https://github.com/phpbb/phpbb
-* YunoHost documentation for this app: https://yunohost.org/app_phpbb
-* Report a bug: https://github.com/YunoHost-Apps/phpbb_ynh/issues
+* Official app website: <http://www.phpbb.com/>
+* Official admin documentation: <https://www.phpbb.com/support/docs/>
+* Upstream app code repository: <https://github.com/phpbb/phpbb>
+* YunoHost documentation for this app: <https://yunohost.org/app_phpbb>
+* Report a bug: <https://github.com/YunoHost-Apps/phpbb_ynh/issues>
 
 ## Developer info
 
 Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/phpbb_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
-```
+
+``` bash
 sudo yunohost app install https://github.com/YunoHost-Apps/phpbb_ynh/tree/testing --debug
 or
 sudo yunohost app upgrade phpbb -u https://github.com/YunoHost-Apps/phpbb_ynh/tree/testing --debug
 ```
 
-**More info regarding app packaging:** https://yunohost.org/packaging_apps
+**More info regarding app packaging:** <https://yunohost.org/packaging_apps>

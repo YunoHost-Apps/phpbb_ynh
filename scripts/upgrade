@@ -118,6 +118,10 @@ ynh_script_progression --message="Upgrading the $app..." --weight=1
 
 ynh_exec_as $app php${phpversion} "$final_path/bin/phpbbcli.php" --no-interaction db:migrate --safe-mode
 
+if [ -e "$final_path/install_old" ]; then
+	ynh_secure_remove --file="$final_path/install_old"
+fi
+
 if [ -e "$final_path/install" ]; then
 	ynh_exec_as $app mv "$final_path/install" "$final_path/install_old"
 fi

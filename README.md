@@ -5,7 +5,8 @@ It shall NOT be edited by hand.
 
 # phpBB for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/phpbb.svg)](https://dash.yunohost.org/appci/app/phpbb) ![Working status](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/phpbb.svg)](https://dash.yunohost.org/appci/app/phpbb) ![Working status](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)
+
 [![Install phpBB with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpbb)
 
 *[Lire ce readme en français.](./README_fr.md)*

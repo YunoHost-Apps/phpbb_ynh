@@ -1,0 +1,80 @@
+packaging_format = 2
+
+id = "phpbb"
+name = "phpBB"
+description.en = "Forum software that is easy to use, powerful, and highly customisable"
+description.fr = "Forum facile à utiliser, puissant et hautement personnalisable"
+
+version = "3.3.8~ynh3"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "GPL-2.0-only"
+website = "http://www.phpbb.com/"
+demo = "https://www.phpbb.com/demo/"
+admindoc = "https://www.phpbb.com/support/docs/"
+code = "https://github.com/phpbb/phpbb"
+
+[integration]
+yunohost = ">= 11.1.19"
+architectures = "all"
+multi_instance = true
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/phpbb"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+    [install.language]
+    ask.en = "Choose the application language"
+    ask.fr = "Choisissez la langue de l'application"
+    type = "string"
+    choices = ["fr", "en"]
+    default = "fr"
+
+    [install.admin]
+    type = "user"
+
+    [install.password]
+    type = "password"
+
+[resources]
+
+    [resources.sources]
+
+        [resources.sources.main]
+        url = "https://download.phpbb.com/pub/release/3.3/3.3.8/phpBB-3.3.8.zip"
+        sha256 = "efc7a43306a39b5ff1137c44462aca80c21612e0962a0f8048e15fbcc28ec76c"
+
+        [resources.sources.fr]
+        url = "https://github.com/qiaeru/phpbb-language-fr/archive/refs/tags/v4.5.0.zip"
+        sha256 = "a959ab84d60c99cabb9353adcc2e24d9f597669c8832e6fa31afebc3cafb1b5e"
+
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+    admin.url = "/adm"
+    admin.allowed = "admins"
+
+    [resources.apt]
+    packages = "mariadb-server php7.4-mbstring php7.4-fpm php7.4-common php7.4-gmp php7.4-curl php7.4-intl php7.4-xmlrpc php7.4-mysql php7.4-gd php7.4-xml php7.4-cli php7.4-zip php7.4-bcmath"
+
+    [resources.database]
+    type = "mysql"

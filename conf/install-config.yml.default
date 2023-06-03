@@ -33,6 +33,6 @@ installer:
         force_server_vars: true
         server_name: __DOMAIN__
         server_port: 443
-        script_path: __PATH_URL__
+        script_path: __PATH__
 
     extensions: ['phpbb/viglink']

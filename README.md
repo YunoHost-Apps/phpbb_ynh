@@ -5,7 +5,8 @@ It shall NOT be edited by hand.
 
 # phpBB for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/phpbb.svg)](https://dash.yunohost.org/appci/app/phpbb) ![Working status](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/phpbb.svg)](https://dash.yunohost.org/appci/app/phpbb) ![Working status](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)
+
 [![Install phpBB with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpbb)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -25,14 +26,6 @@ phpBB is a free flat-forum bulletin board software solution that can be used to 
 ## Screenshots
 
 ![Screenshot of phpBB](./doc/screenshots/screenshot.png)
-
-## Disclaimers / important information
-
-## Configuration
-
-1. The app will require to complete the registration process after the instllation is complete by **visiting the domain** on  which *phpBB* is installed.
-1. The MySQL database credentials will be sent to the **admin mail**.
-1. Please delete, move or rename the install directory (`mv /var/www/phpbb/install /var/www/phpbb/install_old`) before you use your board. If this directory is still present, only the Administration Control Panel (ACP) will be accessible.
 
 ## Documentation and resources
 

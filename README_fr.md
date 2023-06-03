@@ -5,15 +5,16 @@ It shall NOT be edited by hand.
 
 # phpBB pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/phpbb.svg)](https://dash.yunohost.org/appci/app/phpbb) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/phpbb.svg)](https://dash.yunohost.org/appci/app/phpbb) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)
+
 [![Installer phpBB avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpbb)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer phpBB rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer phpBB rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website. With an extensive database of user-created extensions and styles database containing hundreds of style and image packages to customise your board, you can create a very unique forum in minutes.
 
@@ -22,22 +23,15 @@ phpBB is a free flat-forum bulletin board software solution that can be used to 
 
 **Démo :** https://www.phpbb.com/demo/
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de phpBB](./doc/screenshots/screenshot.png)
+![Capture d’écran de phpBB](./doc/screenshots/screenshot.png)
 
-## Avertissements / informations importantes
-
-## Configuration
-
-1. L'application devra terminer le processus d'enregistrement une fois l'installation terminée en **visitant le domaine** sur lequel *phpBB* est installé.
-1. Les informations d'identification de la base de données MySQL seront envoyées à la **messagerie admin**.
-1. Veuillez supprimer, déplacer ou renommer le répertoire d'installation (`mv /var/www/phpbb/install /var/www/phpbb/install_old`) avant d'utiliser votre forum. Si ce répertoire est toujours présent, seul le panneau de configuration d'administration (ACP) sera accessible. 
 ## Documentations et ressources
 
-* Site officiel de l'app : <http://www.phpbb.com/>
-* Documentation officielle de l'admin : <https://www.phpbb.com/support/docs/>
-* Dépôt de code officiel de l'app : <https://github.com/phpbb/phpbb>
+* Site officiel de l’app : <http://www.phpbb.com/>
+* Documentation officielle de l’admin : <https://www.phpbb.com/support/docs/>
+* Dépôt de code officiel de l’app : <https://github.com/phpbb/phpbb>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_phpbb>
 * Signaler un bug : <https://github.com/YunoHost-Apps/phpbb_ynh/issues>
 
@@ -53,4 +47,4 @@ ou
 sudo yunohost app upgrade phpbb -u https://github.com/YunoHost-Apps/phpbb_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>

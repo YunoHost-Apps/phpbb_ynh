@@ -5,7 +5,7 @@ name = "phpBB"
 description.en = "Forum software that is easy to use, powerful, and highly customisable"
 description.fr = "Forum facile à utiliser, puissant et hautement personnalisable"
 
-version = "3.3.8~ynh3"
+version = "3.3.8~ynh4"
 
 maintainers = ["eric_G"]
 

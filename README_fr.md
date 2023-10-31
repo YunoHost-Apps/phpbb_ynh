@@ -32,7 +32,7 @@ phpBB is a free flat-forum bulletin board software solution that can be used to 
 * Site officiel de l’app : <http://www.phpbb.com/>
 * Documentation officielle de l’admin : <https://www.phpbb.com/support/docs/>
 * Dépôt de code officiel de l’app : <https://github.com/phpbb/phpbb>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_phpbb>
+* YunoHost Store: <https://apps.yunohost.org/app/phpbb>
 * Signaler un bug : <https://github.com/YunoHost-Apps/phpbb_ynh/issues>
 
 ## Informations pour les développeurs

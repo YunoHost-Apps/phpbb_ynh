@@ -16,7 +16,7 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website. With an extensive database of user-created extensions and styles database containing hundreds of style and image packages to customise your board, you can create a very unique forum in minutes.
+phpBB est une solution logicielle gratuite de forum d'affichage de forum plat qui peut être utilisée pour rester en contact avec un groupe de personnes ou pour alimenter l'ensemble de votre site Web. Avec une vaste base de données d'extensions créées par l'utilisateur et une base de données de styles contenant des centaines de packages de styles et d'images pour personnaliser votre tableau, vous pouvez créer un forum tout à fait unique en quelques minutes.
 
 
 **Version incluse :** 3.3.11~ynh1

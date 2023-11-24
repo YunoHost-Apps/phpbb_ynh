@@ -20,7 +20,7 @@ installer:
 
     email:
         enabled: true
-        smtp_delivery : ~
+        smtp_delivery: ~
         smtp_host: localhost
         smtp_port: 25
         smtp_auth: PLAIN

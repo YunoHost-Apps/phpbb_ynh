@@ -5,7 +5,7 @@ name = "phpBB"
 description.en = "Forum software that is easy to use, powerful, and highly customisable"
 description.fr = "Forum facile à utiliser, puissant et hautement personnalisable"
 
-version = "3.3.8~ynh4"
+version = "3.3.11~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -17,11 +17,14 @@ admindoc = "https://www.phpbb.com/support/docs/"
 code = "https://github.com/phpbb/phpbb"
 
 [integration]
-yunohost = ">= 11.1.19"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
+
 ldap = false
+
 sso = false
+
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
@@ -41,7 +44,7 @@ ram.runtime = "50M"
     [install.language]
     ask.en = "Choose the application language"
     ask.fr = "Choisissez la langue de l'application"
-    type = "string"
+    type = "select"
     choices = ["fr", "en"]
     default = "fr"
 
@@ -56,15 +59,16 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://download.phpbb.com/pub/release/3.3/3.3.8/phpBB-3.3.8.zip"
-        sha256 = "efc7a43306a39b5ff1137c44462aca80c21612e0962a0f8048e15fbcc28ec76c"
+        url = "https://download.phpbb.com/pub/release/3.3/3.3.11/phpBB-3.3.11.zip"
+        sha256 = "02006f09d71c44de55044497ef8633f95c6103361d175c816015280f3bcfe87b"
 
         [resources.sources.fr]
-        url = "https://github.com/qiaeru/phpbb-language-fr/archive/refs/tags/v4.5.0.zip"
-        sha256 = "a959ab84d60c99cabb9353adcc2e24d9f597669c8832e6fa31afebc3cafb1b5e"
+        url = "https://github.com/qiaeru/phpbb-language-fr/archive/refs/tags/v4.11.0.zip"
+        sha256 = "3b485a18390f407191d72b631b6865f80c5de063fd61a1442913e4d33dd22af4"
 
 
     [resources.system_user]
+    allow_email = true
 
     [resources.install_dir]
 
@@ -74,7 +78,7 @@ ram.runtime = "50M"
     admin.allowed = "admins"
 
     [resources.apt]
-    packages = "mariadb-server php7.4-mbstring php7.4-fpm php7.4-common php7.4-gmp php7.4-curl php7.4-intl php7.4-xmlrpc php7.4-mysql php7.4-gd php7.4-xml php7.4-cli php7.4-zip php7.4-bcmath"
+    packages = "mariadb-server, php8.2-mbstring, php8.2-gmp, php8.2-curl, php8.2-intl, php8.2-xmlrpc, php8.2-mysql, php8.2-gd, php8.2-xml, php8.2-cli, php8.2-zip, php8.2-bcmath"
 
     [resources.database]
     type = "mysql"

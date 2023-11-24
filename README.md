@@ -19,7 +19,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website. With an extensive database of user-created extensions and styles database containing hundreds of style and image packages to customise your board, you can create a very unique forum in minutes.
 
 
-**Shipped version:** 3.3.8~ynh4
+**Shipped version:** 3.3.11~ynh1
 
 **Demo:** https://www.phpbb.com/demo/
 

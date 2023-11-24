@@ -20,12 +20,12 @@ installer:
 
     email:
         enabled: true
-        smtp_delivery : ~
-        smtp_host: ~
-        smtp_port: ~
+        smtp_delivery: ~
+        smtp_host: localhost
+        smtp_port: 25
         smtp_auth: PLAIN
-        smtp_user: ~
-        smtp_pass: ~
+        smtp_user: __APP__
+        smtp_pass: __MAIL_PWD__
 
     server:
         cookie_secure: true

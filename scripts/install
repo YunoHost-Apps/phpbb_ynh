@@ -36,9 +36,9 @@ chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
 
 #=================================================
-# SETUP APPLICATION WITH CLI
+# APP INITIAL CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring $app..." --weight=1
+ynh_script_progression --message="Adding $app's configuration files..." --weight=1
 
 ynh_add_config --template="install-config.yml.default" --destination="$install_dir/install/install-config.yml"
 
@@ -47,9 +47,9 @@ ynh_exec_as "$app" php${phpversion} "$install_dir/install/phpbbcli.php" -q --no-
 mv "$install_dir/install" "$install_dir/install_old"
 
 #=================================================
-# NGINX CONFIGURATION
+# SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring NGINX web server..." --weight=2
+ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config

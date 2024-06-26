@@ -5,7 +5,7 @@
 
 # YunoHost 上的 phpBB
 
-[![集成程度](https://dash.yunohost.org/integration/phpbb.svg)](https://dash.yunohost.org/appci/app/phpbb) ![工作状态](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/phpbb.svg)](https://ci-apps.yunohost.org/ci/apps/phpbb/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)
 
 [![使用 YunoHost 安装 phpBB](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpbb)
 

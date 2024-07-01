@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # phpBB YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/phpbb.svg)](https://dash.yunohost.org/appci/app/phpbb) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/phpbb.svg)](https://ci-apps.yunohost.org/ci/apps/phpbb/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)
 
 [![Instalatu phpBB YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpbb)
 

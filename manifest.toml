@@ -5,7 +5,7 @@ name = "phpBB"
 description.en = "Forum software that is easy to use, powerful, and highly customisable"
 description.fr = "Forum facile à utiliser, puissant et hautement personnalisable"
 
-version = "3.3.11~ynh1"
+version = "3.3.11~ynh2"
 
 maintainers = []
 
@@ -22,7 +22,6 @@ architectures = "all"
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "50M"
@@ -45,7 +44,7 @@ ram.runtime = "50M"
     ask.en = "Choose the application language"
     ask.fr = "Choisissez la langue de l'application"
     type = "select"
-    choices = ["fr", "en"]
+    choices = ["en", "fr", "it"]
     default = "fr"
 
     [install.admin]

@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
 source _common.sh
 source /usr/share/yunohost/helpers
 
@@ -14,10 +8,8 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression --message="Removing NGINX web server configuration..." --weight=1
 
-# Remove the dedicated NGINX config
 ynh_remove_nginx_config
 
-# Remove the dedicated PHP-FPM config
 ynh_remove_fpm_config
 
 ynh_secure_remove --file="/etc/cron.d/$app"

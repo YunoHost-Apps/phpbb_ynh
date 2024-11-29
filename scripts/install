@@ -24,11 +24,17 @@ ynh_setup_source --dest_dir="$tmpdir" --source_id=fr
 cp -a "$tmpdir/language/fr" "$install_dir/language/fr"
 cp -a "$tmpdir/styles/prosilver/theme/fr" "$install_dir/styles/prosilver/theme/fr"
 
+# Download, check integrity, uncompress and patch the source from app.src
+ynh_setup_source --dest_dir="$tmpdir" --source_id=it
+cp -a "$tmpdir/language/it" "$install_dir/language/it"
+cp -a "$tmpdir/styles/prosilver/theme/it" "$install_dir/styles/prosilver/theme/it"
+
 # Remove the tmp directory securely
 ynh_safe_rm "$tmpdir"
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R o-rwx "$install_dir"
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R $app:www-data "$install_dir"
+chmod -R o-rwx "$install_dir"
+chown -R $app:www-data "$install_dir"
+
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
@@ -45,15 +51,11 @@ mv "$install_dir/install" "$install_dir/install_old"
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
 
-# Create a dedicated NGINX config
 ynh_config_add_nginx
 
-# Create a dedicated PHP-FPM config
 ynh_config_add_phpfpm
 
 ynh_config_add --template="phpbb.cron" --destination="/etc/cron.d/$app"
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown root: "/etc/cron.d/$app"
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod 644 "/etc/cron.d/$app"
 
 #=================================================
 # END OF SCRIPT

@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # phpBB pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/phpbb.svg)](https://ci-apps.yunohost.org/ci/apps/phpbb/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/phpbb)](https://ci-apps.yunohost.org/ci/apps/phpbb/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/phpbb)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/phpbb)
 
 [![Installer phpBB avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpbb)
 
@@ -19,7 +21,7 @@ Il NE doit PAS être modifié à la main.
 phpBB est une solution logicielle gratuite de forum d'affichage de forum plat qui peut être utilisée pour rester en contact avec un groupe de personnes ou pour alimenter l'ensemble de votre site Web. Avec une vaste base de données d'extensions créées par l'utilisateur et une base de données de styles contenant des centaines de packages de styles et d'images pour personnaliser votre tableau, vous pouvez créer un forum tout à fait unique en quelques minutes.
 
 
-**Version incluse :** 3.3.11~ynh1
+**Version incluse :** 3.3.11~ynh2
 
 **Démo :** <https://www.phpbb.com/demo/>
 

@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # phpBB para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/phpbb.svg)](https://ci-apps.yunohost.org/ci/apps/phpbb/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/phpbb)](https://ci-apps.yunohost.org/ci/apps/phpbb/)
+![Estado funcional](https://apps.yunohost.org/badge/state/phpbb)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/phpbb)
 
 [![Instalar phpBB con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpbb)
 
@@ -19,7 +21,7 @@ No se debe editar a mano.
 phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website. With an extensive database of user-created extensions and styles database containing hundreds of style and image packages to customise your board, you can create a very unique forum in minutes.
 
 
-**Versión actual:** 3.3.11~ynh1
+**Versión actual:** 3.3.11~ynh2
 
 **Demo:** <https://www.phpbb.com/demo/>
 
@@ -37,7 +39,7 @@ phpBB is a free flat-forum bulletin board software solution that can be used to 
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/phpbb_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/phpbb_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 

@@ -18,12 +18,10 @@ ynh_setup_source --dest_dir="$install_dir"
 
 tmpdir="$(mktemp -d)"
 
-# Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$tmpdir" --source_id=fr
 cp -a "$tmpdir/language/fr" "$install_dir/language/fr"
 cp -a "$tmpdir/styles/prosilver/theme/fr" "$install_dir/styles/prosilver/theme/fr"
 
-# Remove the tmp directory securely
 ynh_safe_rm "$tmpdir"
 
 chmod -R o-rwx "$install_dir"

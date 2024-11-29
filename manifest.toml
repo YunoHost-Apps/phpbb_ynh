@@ -45,7 +45,7 @@ ram.runtime = "50M"
     ask.en = "Choose the application language"
     ask.fr = "Choisissez la langue de l'application"
     type = "select"
-    choices = ["en", "fr", "it"]
+    choices = ["en", "fr"]
     default = "fr"
 
     [install.admin]
@@ -65,10 +65,6 @@ ram.runtime = "50M"
         [resources.sources.fr]
         url = "https://github.com/qiaeru/phpbb-language-fr/archive/refs/tags/v4.11.0.zip"
         sha256 = "3b485a18390f407191d72b631b6865f80c5de063fd61a1442913e4d33dd22af4"
-
-        [resources.sources.it]
-        url = "https://www.phpbb.com/customise/db/download/207676?sid=918c34751cecb98516bb73d60ff96bec"
-        sha256 = "78c20d380396b455a64c783fb7d3a2066ced95e454f37de8b85f830283d77a92"
 
     [resources.system_user]
     allow_email = true

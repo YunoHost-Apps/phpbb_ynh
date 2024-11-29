@@ -14,7 +14,6 @@ email=$(ynh_user_get_info --username=$admin --key=mail)
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-# Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$install_dir"
 
 tmpdir="$(mktemp -d)"
@@ -23,11 +22,6 @@ tmpdir="$(mktemp -d)"
 ynh_setup_source --dest_dir="$tmpdir" --source_id=fr
 cp -a "$tmpdir/language/fr" "$install_dir/language/fr"
 cp -a "$tmpdir/styles/prosilver/theme/fr" "$install_dir/styles/prosilver/theme/fr"
-
-# Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$tmpdir" --source_id=it
-cp -a "$tmpdir/language/it" "$install_dir/language/it"
-cp -a "$tmpdir/styles/prosilver/theme/it" "$install_dir/styles/prosilver/theme/it"
 
 # Remove the tmp directory securely
 ynh_safe_rm "$tmpdir"

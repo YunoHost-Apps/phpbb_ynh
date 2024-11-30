@@ -59,8 +59,8 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://download.phpbb.com/pub/release/3.3/3.3.11/phpBB-3.3.11.zip"
-        sha256 = "02006f09d71c44de55044497ef8633f95c6103361d175c816015280f3bcfe87b"
+        url = "https://download.phpbb.com/pub/release/3.3/3.3.14/phpBB-3.3.14.zip"
+        sha256 = "2df67e792e89f832ba12a5c0dd548f5067ea0c8c75a2243277ab3060548749f3"
 
         [resources.sources.fr]
         url = "https://github.com/qiaeru/phpbb-language-fr/archive/refs/tags/v4.11.0.zip"

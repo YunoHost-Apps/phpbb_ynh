@@ -5,7 +5,7 @@ name = "phpBB"
 description.en = "Forum software that is easy to use, powerful, and highly customisable"
 description.fr = "Forum facile à utiliser, puissant et hautement personnalisable"
 
-version = "3.3.11~ynh2"
+version = "3.3.14~ynh1"
 
 maintainers = []
 
@@ -63,8 +63,8 @@ ram.runtime = "50M"
         sha256 = "2df67e792e89f832ba12a5c0dd548f5067ea0c8c75a2243277ab3060548749f3"
 
         [resources.sources.fr]
-        url = "https://github.com/qiaeru/phpbb-language-fr/archive/refs/tags/v4.11.0.zip"
-        sha256 = "3b485a18390f407191d72b631b6865f80c5de063fd61a1442913e4d33dd22af4"
+        url = "https://github.com/qiaeru/phpbb-language-fr/archive/refs/tags/v4.14.0.zip"
+        sha256 = "0516c92fa85b348b07cb6d700c389f2b9768e4eba13c315f6b965913e0c1f61e"
 
     [resources.system_user]
     allow_email = true

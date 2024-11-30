@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # phpBB YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/phpbb.svg)](https://ci-apps.yunohost.org/ci/apps/phpbb/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/phpbb.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/phpbb.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/phpbb)](https://ci-apps.yunohost.org/ci/apps/phpbb/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/phpbb)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/phpbb)
 
 [![Instalatu phpBB YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpbb)
 
@@ -19,7 +21,7 @@ EZ editatu eskuz.
 phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website. With an extensive database of user-created extensions and styles database containing hundreds of style and image packages to customise your board, you can create a very unique forum in minutes.
 
 
-**Paketatutako bertsioa:** 3.3.11~ynh1
+**Paketatutako bertsioa:** 3.3.11~ynh2
 
 **Demoa:** <https://www.phpbb.com/demo/>
 

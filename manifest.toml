@@ -5,7 +5,7 @@ name = "phpBB"
 description.en = "Forum software that is easy to use, powerful, and highly customisable"
 description.fr = "Forum facile à utiliser, puissant et hautement personnalisable"
 
-version = "3.3.11~ynh1"
+version = "3.3.11~ynh2"
 
 maintainers = []
 
@@ -17,12 +17,12 @@ admindoc = "https://www.phpbb.com/support/docs/"
 code = "https://github.com/phpbb/phpbb"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 11.2.30"
+helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "50M"
@@ -45,7 +45,7 @@ ram.runtime = "50M"
     ask.en = "Choose the application language"
     ask.fr = "Choisissez la langue de l'application"
     type = "select"
-    choices = ["fr", "en"]
+    choices = ["en", "fr"]
     default = "fr"
 
     [install.admin]
@@ -66,11 +66,11 @@ ram.runtime = "50M"
         url = "https://github.com/qiaeru/phpbb-language-fr/archive/refs/tags/v4.11.0.zip"
         sha256 = "3b485a18390f407191d72b631b6865f80c5de063fd61a1442913e4d33dd22af4"
 
-
     [resources.system_user]
     allow_email = true
 
     [resources.install_dir]
+    group = "www-data:r-x"
 
     [resources.permissions]
     main.url = "/"

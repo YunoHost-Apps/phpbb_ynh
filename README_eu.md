@@ -21,7 +21,7 @@ EZ editatu eskuz.
 phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website. With an extensive database of user-created extensions and styles database containing hundreds of style and image packages to customise your board, you can create a very unique forum in minutes.
 
 
-**Paketatutako bertsioa:** 3.3.11~ynh2
+**Paketatutako bertsioa:** 3.3.14~ynh1
 
 **Demoa:** <https://www.phpbb.com/demo/>
 

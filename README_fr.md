@@ -21,7 +21,7 @@ Il NE doit PAS être modifié à la main.
 phpBB est une solution logicielle gratuite de forum d'affichage de forum plat qui peut être utilisée pour rester en contact avec un groupe de personnes ou pour alimenter l'ensemble de votre site Web. Avec une vaste base de données d'extensions créées par l'utilisateur et une base de données de styles contenant des centaines de packages de styles et d'images pour personnaliser votre tableau, vous pouvez créer un forum tout à fait unique en quelques minutes.
 
 
-**Version incluse :** 3.3.11~ynh2
+**Version incluse :** 3.3.14~ynh1
 
 **Démo :** <https://www.phpbb.com/demo/>
 

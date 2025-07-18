@@ -5,7 +5,7 @@ name = "phpBB"
 description.en = "Forum software that is easy to use, powerful, and highly customisable"
 description.fr = "Forum facile à utiliser, puissant et hautement personnalisable"
 
-version = "3.3.14~ynh1"
+version = "3.3.15~ynh1"
 
 maintainers = []
 
@@ -59,8 +59,8 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://download.phpbb.com/pub/release/3.3/3.3.14/phpBB-3.3.14.zip"
-        sha256 = "2df67e792e89f832ba12a5c0dd548f5067ea0c8c75a2243277ab3060548749f3"
+        url = "https://download.phpbb.com/pub/release/3.3/3.3.15/phpBB-3.3.15.zip"
+        sha256 = "3904cc6668ea52318867fec1f7fe8b9bc0bd5431da1df617aa5c43c092a44252"
 
         [resources.sources.fr]
         url = "https://github.com/qiaeru/phpbb-language-fr/archive/refs/tags/v4.14.0.zip"
